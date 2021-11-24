@@ -88,3 +88,42 @@ s1 = readLine();
           age += 1
    };
 }
+
+   //----------------------------------------------------------------------------------------------------------------
+
+   //    Day 5: Loops
+
+    function main() {
+    const n = parseInt(readLine().trim(), 10);
+    for (let i = 1; i <= 10; i++) {
+        let result;
+        result = `${n} x ${i} = `  +  n * i
+       console.log( result) 
+    }
+}
+
+   //----------------------------------------------------------------------------------------------------------------
+
+   //    Day 6: Let's Review
+
+   // Önce console'dan kaç tane string okuyacağımızı belirten bir sayı almamız gerekiyor, daha sonra bu sayı kadar inputtaa olan string içersinde bu işlemi yapmamız gerekiyor. Önce console'dan string okummamız gerekiyor. Önce n sayısını yani kaç tane string olacağını buluyoruz. Daha sonra kaç tane string varsa o kadar string'i okumaya çalışcaz.
+
+//    '2\nHacker\nRank' => input bu şekkilde biz bunu input.split('\n') ifade ile bölerek "2", "Hacker", "Rank" haline getirdik.  Sonrasında ise başkaki "2" ifadesini kesmek için .slice(1) methodunu kullanarak "Hacker", "Rank" haline getirdik.
+
+// Sonrasında tüm stringleri tek tek almak için forEach kullandık.
+
+function processData(input) {
+    //Enter your code here
+    let s = input.split("\n").slice(1);
+    s.forEach((str) => {
+        let even = "";
+        let odd = "";
+        for (let i = 0; i < str.length; i++) {
+            i % 2 == 0 ? even += str[i] : odd += str[i]; 
+        }
+        console.log(`${even} ${odd}`)
+    })
+} 
+
+   //----------------------------------------------------------------------------------------------------------------
+
