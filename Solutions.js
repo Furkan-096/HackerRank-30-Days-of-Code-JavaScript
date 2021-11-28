@@ -126,4 +126,56 @@ function processData(input) {
 } 
 
    //----------------------------------------------------------------------------------------------------------------
+//  Day 7: Arrays
+   
+   function main() {
+    const n = parseInt(readLine().trim(), 10);
 
+    const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
+    
+    let arr1 = ""
+    arr1 = arr.reverse()
+    arr1 = arr.join(" ")
+    console.log(arr1)
+}
+
+   //----------------------------------------------------------------------------------------------------------------
+
+//    Day 8: Dictionaries and Maps
+
+function processData(input) {
+    input = input.split('\n')
+    var N = parseInt(input[0])
+
+    var phoneBook = {};
+    for (var i = 0; i < N; i++) {
+        var line = input[i + 1];
+        line = line.split(" ");
+        phoneBook[line[0]] = line[1]
+    }
+
+for (let i = N + 1; i < input.length; i++) {
+    var num = (phoneBook[input[i]])
+    if (num !== undefined ) {
+        console.log(input[i]+ "=" + num)
+    } else {
+        console.log('Not found')
+    }
+}
+   
+}
+
+// input.split("\n") ile birlikte array haline getirdik.
+// input = [
+//   '3',
+//   'sam 99912222',
+//   'tom 11122222',
+//   'harry 12299933',
+//   'sam',
+//   'edward',
+//   'harry'
+// ]
+
+   //----------------------------------------------------------------------------------------------------------------
+
+   
